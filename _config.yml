@@ -1,0 +1,9 @@
+title: My Jekyll Site
+email: your-email@example.com
+description: >- # this means “folded” text
+  A simple Jekyll site example.
+baseurl: "" # leave empty for user site, or put project repo name here
+url: "https://yourusername.github.io" # replace with your GitHub URL
+
+theme: minima
+plugins: []
