@@ -1,23 +1,57 @@
+/* Load FreeMono locally */
+@font-face {
+  font-family: 'FreeMono';
+  src: url('/assets/fonts/FreeMono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global body styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'FreeMono', monospace;
+  background: #121212;
+  color: #e0e0e0;
   max-width: 700px;
   margin: 2rem auto;
   padding: 0 1rem;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
 
-header, footer {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0;
+  font-family: inherit;
 }
 
+/* Links */
 a {
-  color: #0366d6;
+  color: #66aaff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #99cfff;
+}
+
+/* Code and preformatted text */
+pre, code {
+  background-color: #222;
+  color: #ccc;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+/* Header and footer */
+header, footer {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bbbbbb;
+  font-family: inherit;
+}
+
+/* Force all elements to use the same font */
+* {
+  font-family: inherit;
 }
