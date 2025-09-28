@@ -1,97 +1,81 @@
 ---
 layout: default
-title: Home
----
-**Software Engineer | Senior Analyst | .NET Developer** 
-**Microsoft Azure Certified | Focused on AI, Docker & Kubernetes**  
-*I write code to solve problems.*
-
+title: Home - Francesco Paolo Lezza
 ---
 
-## Top Skills
 
-- Experienced software development professional  
-- Proficient in:
-  - Client-Server architectures  
-  - Classic Three-Layer design  
-  - Microservices design  
-- Intermediate Linux user  
-- Strong interest in:
-  - Machine Learning & Deep Learning  
-  - Artificial Neural Networks  
-  - Natural Language Processing (NLP)  
-- Skilled with:
-  - Docker & Kubernetes  
-  - Azure AI Systems  
-  - Splunk
+**Software Engineer Senior Analyst | .NET Developer**
+**Microsoft Azure Certified | Focused on AI, Docker & Kubernetes**
+<br/>*I write code to solve problems.*
 
 ---
 
-## Software Engineer – Senior Analyst
+## Professional Summary
 
-### Responsibilities
+Software Engineer with 6+ years at Fincons Group and 16+ years of development experience. Skilled in .NET Core, C#, and Python with solid knowledge of DevOps, containerization, and cloud technologies. Currently working as Senior Analyst for Swiss financial services, supporting KTLO operations and maintaining business-critical applications. Interested in AI/ML with growing experience in machine learning projects.
 
-- Troubleshoot and maintain .NET applications (Framework and Core)  
-- Manage and run batch procedures in a team environment  
-- Use Docker & Kubernetes for containerization and orchestration  
-- Work with MS SQL Server and Couchbase databases  
-- Perform unit testing with xUnit  
-- Develop and manage CI/CD pipelines with tools like:  
-  *ServiceNow, Jira, Git, Jenkins, SonarQube, Artifactory, NuGet*  
-- Perform preventive maintenance and generate reports with:  
-  *AppDynamics, Dynatrace, Splunk*
+## Expertise
 
-### Key Contributions
+- .NET Framework & ASP.NET Core
+- Containerization: Docker, Kubernetes
+- Cloud: Microsoft Azure (including Azure AI)
+- Databases: MS SQL Server, Couchbase, Neo4j
+- CI/CD: Jenkins, Git, GitHub, SonarQube
+- Monitoring: Splunk, AppDynamics, Dynatrace
+- Testing: xUnit
+- AI/ML: Machine Learning, Deep Learning, NLP, Neural Networks
 
-- Reduced incident resolution times well below expected SLAs  
-- Delivered high-quality code consistently on time  
-- Met and exceeded business objectives regularly
+## Professional Experience
 
----
+### Software Engineer Senior Analyst
+**Fincons Group** | *Jun 2023 - Present*
+*Swiss Financial Company (Viseca Payment Services)*
 
-## Additional Activities
+- Lead KTLO team responsible for .NET Framework/Core applications and batch procedures
+- Manage containerized applications using Docker and Kubernetes orchestration
+- Maintain databases across MS SQL Server and Couchbase platforms
+- Implement CI/CD workflows with Jenkins, Git, and automated testing
 
-Currently deepening knowledge in Machine Learning and Deep Learning, with particular interest in **Natural Language Processing (NLP)**.  
-Built and published multiple projects on **Kaggle** and **GitHub**.
+**Key Achievements:**
+- Resolved high-volume incidents consistently under SLA timeframes
+- Delivered zero-delay code releases ensuring on-time product delivery
+- Achieved all business objectives through proactive system monitoring
 
----
+### .NET Software Engineer Analyst
+**Fincons Group** | *Aug 2019 - May 2023*
+*Swiss Financial Company (Aduno/Viseca Payment Services)*
 
-## Certifications & Professional Development
+- Maintained and evolved product catalog using Microservices infrastructure
+- Implemented PRISM Pattern (MVVM) with ASP.NET MVC and Core 3.0
+- Managed database deployments with SSIS and DACPAC
 
-(For the complete list, please see my [LinkedIn profile](#).)
+**Key Achievements:**
+- Delivered well-documented code on schedule for seamless product updates
+- Optimized legacy systems for improved stability and maintainability
+- Successfully met all assigned project objectives and client requirements
 
-### 2024
-- Splunk Core Certified Power User
+### Freelance Software Developer
+**Self-Employed** | *Apr 2003 - Aug 2019*
 
-### 2023
-- Microsoft Azure Data Fundamentals  
-- Microsoft Certified: Azure Developer Associate  
+- Developed and maintained information systems for fee-only consultants
+- Created tax software for income statements and 770 forms processing
+- Provided IT consulting services across multiple client engagements
 
-### 2022
-- Microsoft Azure AI Engineer Associate  
-- Microsoft Azure AI Fundamentals  
+## Current Focus
 
-### 2021
-- Microsoft Azure Fundamentals  
-- Coursera – Machine Learning (Stanford Online)  
+Learning more about Machine Learning and Deep Learning, particularly interested in Natural Language Processing applications. Working on projects through Kaggle and GitHub to develop practical AI skills alongside current professional work.
 
-### 2020
-- Microsoft Certified Solutions Associate – Web Applications  
+**Recent Learning:** Currently studying C programming fundamentals and Linux kernel basics to better understand low-level system concepts, complementing existing Linux experience with deeper technical knowledge.
 
-### 2018
-- Cambridge English Level 1 Certificate in ESOL International (B2 First)  
+## Core Responsibilities & Achievements
 
-### 2016
-- Microsoft Certified Professional  
-- Microsoft Specialist: Programming in C#  
-
-<!-- <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small> - {{ post.date | date: "%B %-d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul> -->
+- Develop and maintain .NET applications and batch jobs
+- Monitor systems to reduce incident resolution times
+- Collaborate closely with teams to deliver quality code on time
+- Continuously improve skills through AI projects on Kaggle and GitHub
 
 ---
+
+**Location:** Bari, Apulia, Italy
+**Work Preference:** Hybrid/Remote Available
+
