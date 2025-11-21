@@ -1,7 +1,7 @@
 title: Francesco Paolo Lezza
-# email: 
+# email:
 description: >- # this means “folded” text
-  A simple Jekyll site example.
+  My simple Jekyll personal site.
 baseurl: ""                           # leave empty for user site, or put project repo name here
 url: "https://github.com/FrancescoPaoloL" # replace with your GitHub URL
 
