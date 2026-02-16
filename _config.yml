@@ -8,3 +8,5 @@ url: "https://github.com/FrancescoPaoloL" # replace with your GitHub URL
 # theme: minima
 plugins: []
 
+timezone: Europe/Rome
+
