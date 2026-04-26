@@ -3,8 +3,7 @@ title: Francesco Paolo Lezza
 description: >- # this means “folded” text
   My simple Jekyll personal site.
 baseurl: ""                           # leave empty for user site, or put project repo name here
-url: "https://github.com/FrancescoPaoloL" # replace with your GitHub URL
-
+url: "https://francescopaolol.github.io"
 # theme: minima
 plugins: []
 
