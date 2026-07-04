@@ -147,14 +147,96 @@ sitemap: false
     }
   }
 
-  // echo the typed command with its prompt, then run it
+  // --- command history (up/down) and tab-completion ---
+  var history = [];        // past commands, oldest first
+  var histIndex = 0;       // points one past the last entry when not browsing
+
+  var COMMANDS = ["whoami", "ls", "cat", "stack", "contact", "help", "clear", "exit"];
+
+  // return the list of completions for the current input, or null if none/ambiguous handled
+  function complete(val) {
+    var parts = val.split(/\s+/);
+    // completing an argument to `cat`
+    if (parts[0] === "cat" && parts.length === 2) {
+      var frag = parts[1];
+      var names = Object.keys(projects).filter(function (n) { return n.indexOf(frag) === 0; });
+      return { base: "cat ", frag: frag, matches: names };
+    }
+    // completing the command itself (first word, no space yet)
+    if (parts.length === 1) {
+      var cmds = COMMANDS.filter(function (n) { return n.indexOf(parts[0]) === 0; });
+      return { base: "", frag: parts[0], matches: cmds };
+    }
+    return { base: "", frag: "", matches: [] };
+  }
+
+  // longest common prefix of a list of strings
+  function commonPrefix(arr) {
+    if (!arr.length) return "";
+    var p = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+      while (arr[i].indexOf(p) !== 0) p = p.slice(0, -1);
+    }
+    return p;
+  }
+
   cmd.addEventListener("keydown", function (e) {
-    if (e.key !== "Enter") return;
-    var val = cmd.value;
-    print("<span class='prompt'>fpl@web:~$ </span>" + esc(val));
-    commands(val);
-    cmd.value = "";
-    screen.scrollTop = screen.scrollHeight;
+    // Enter: run the command
+    if (e.key === "Enter") {
+      var val = cmd.value;
+      print("<span class='prompt'>fpl@web:~$ </span>" + esc(val));
+      if (val.trim() !== "") {
+        history.push(val);
+      }
+      histIndex = history.length;
+      commands(val);
+      cmd.value = "";
+      screen.scrollTop = screen.scrollHeight;
+      return;
+    }
+
+    // Up: older command
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (histIndex > 0) {
+        histIndex--;
+        cmd.value = history[histIndex];
+      }
+      return;
+    }
+
+    // Down: newer command (or empty line past the end)
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (histIndex < history.length - 1) {
+        histIndex++;
+        cmd.value = history[histIndex];
+      } else {
+        histIndex = history.length;
+        cmd.value = "";
+      }
+      return;
+    }
+
+    // Tab: complete
+    if (e.key === "Tab") {
+      e.preventDefault();
+      var c = complete(cmd.value);
+      if (!c.matches.length) return;
+      if (c.matches.length === 1) {
+        cmd.value = c.base + c.matches[0];
+      } else {
+        var pre = commonPrefix(c.matches);
+        if (pre.length > c.frag.length) {
+          cmd.value = c.base + pre;   // extend to common prefix
+        } else {
+          print("<span class='prompt'>fpl@web:~$ </span>" + esc(cmd.value));
+          print(c.matches.join("   "), "dim");   // list options, bash-style
+          screen.scrollTop = screen.scrollHeight;
+        }
+      }
+      return;
+    }
   });
 
   print(banner, "dim");
