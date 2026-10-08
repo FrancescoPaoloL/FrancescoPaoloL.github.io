@@ -48,3 +48,7 @@ The kernel is getting there one bug at a time.
 
 With AI, it is better to get there first.
 
+---
+
+*Notes.* The kernel work discussed here is Yunseong Kim's: see his [paper](https://arxiv.org/abs/2606.00455) and the RFCs linked above. The analogy to AI agents is mine, and llm-tollgate is a POC, not a finished product. These are my personal views, not my employer's.
+
