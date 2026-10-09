@@ -70,19 +70,20 @@ sitemap: false
   var screen = document.getElementById("screen");
 
   var projects = {
-    "llmSecurityDemo":   "Learning POC: OWASP Top 10 LLM detection | C++/Python | Deployed on Azure via Terraform",
-    "imgpoison":         "JPEG steganography (LSB + spread spectrum). github.com/FrancescoPaoloL/imgpoison",
+    "llm-tollgate-poc":  "Agent-side security gateway for LLM tool calls: policy, injection scan, trust scoring, taint propagation. Didactic, not production.",
+    "llmSecurityDemo":   "OWASP Top 10 for LLMs detection tool | C++/llama.cpp + Flask | Deployed on Azure via Terraform",
+    "blackbox_annealer": "Black-box simulated-annealing attack on a cosine-based LLM guardrail. Result: no bypass, margin measured.",
+    "xsa_POC":           "Attention similarity bias in GPT-2 via TransformerLens. Finds a U-shaped trend, not the monotonic one the paper reports.",
+    "imgpoison":         "Image steganography in C: LSB and Spread Spectrum with texture-aware embedding. Survives JPEG compression.",
     "lockfile-analyzer": "Static analysis for npm/yarn lockfiles: typosquat, integrity, lifecycle scripts.",
-    "llm-tollgate-poc":  "In-process agent-side security gateway: policy, injection scan, taint propagation.",
-    "pngprobe":          "PNG parser from scratch, extracts embedded ZIP + PyTorch tensors.",
-    "swarm-variety-collapse": "N SmolLM2 nodes, self-regulating loop. Endogenous variety collapse as attack surface."
+    "pngprobe":          "PNG parser from scratch, extracts embedded ZIP + PyTorch tensors."
   };
 
   var banner =
 "  __       _\n" +
 " / _|_ __ | |\n" +
 "| |_| '_ \\| |    Francesco Paolo L.\n" +
-"|  _| |_) | |    backend engineer -> AI security\n" +
+"|  _| |_) | |    backend engineer + AI security\n" +
 "|_| | .__/|_|\n" +
 "    |_|\n" +
 "\n" +
@@ -114,8 +115,8 @@ sitemap: false
         print("  clear             clear the screen");
         break;
       case "whoami":
-        print("Senior backend engineer (.NET/Azure) moving toward AI security.");
-        print("I build open-source tooling for LLM security. Debian + nvim + C.");
+        print("Senior Backend Engineer (.NET/Azure) working on AI security.");
+        print("I build open-source tools that make the implicit trust model in LLM systems explicit. Debian + nvim + C.");
         break;
       case "ls":
         if (arg === "projects" || arg === "") {
@@ -126,7 +127,7 @@ sitemap: false
         break;
       case "cat":
         if (!arg) { print("cat: missing operand. try 'ls projects'.", "dim"); break; }
-        if (projects[arg]) { print(esc(projects[arg])); }
+        if (Object.prototype.hasOwnProperty.call(projects, arg)) { print(esc(projects[arg])); }
         else { print("cat: " + esc(arg) + ": No such file or directory", "dim"); }
         break;
       case "stack":
