@@ -15,7 +15,13 @@
     <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
   </header>
   <main>
+    {% if page.date %}
+    <nav class="back-link back-top"><a href="{{ "/" | relative_url }}">&larr; Home</a></nav>
+    {% endif %}
     {{ content }}
+    {% if page.date %}
+    <nav class="back-link back-bottom"><a href="{{ "/" | relative_url }}">&larr; All articles</a></nav>
+    {% endif %}
   </main>
   <footer>
     <p>

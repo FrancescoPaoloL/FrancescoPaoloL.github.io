@@ -63,3 +63,15 @@ img {
   display: block;
 }
 
+
+/* Back navigation on posts */
+.back-link {
+  margin: 1rem 0;
+}
+
+.back-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
